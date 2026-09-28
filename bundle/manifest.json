@@ -1,0 +1,249 @@
+{
+  "version": 4,
+  "official_recall50": 0.920251,
+  "local_recall50": 0.9601151315789473,
+  "expected_answer_sha256": "825e4a10a9d180e09c29227e084b62a62927a4c7a1acccbf077d4b8d53e9c7f1",
+  "queries": 2452,
+  "candidate_pairs": 2426462,
+  "models": {
+    "lgb": {
+      "file": "models/lgb.txt",
+      "library": "lightgbm",
+      "features": 71,
+      "trees": 500
+    },
+    "cat": {
+      "file": "models/cat.cbm",
+      "library": "catboost",
+      "features": 71,
+      "trees": 2000
+    },
+    "prototype": {
+      "file": "models/prototype.cbm",
+      "library": "catboost",
+      "features": 79,
+      "trees": 2000
+    },
+    "adapted": {
+      "file": "models/adapted.txt",
+      "library": "lightgbm",
+      "features": 83,
+      "trees": 600
+    }
+  },
+  "feature_names": [
+    "dense",
+    "title",
+    "body",
+    "char",
+    "title_norm",
+    "body_norm",
+    "char_norm",
+    "same_location",
+    "log_distance",
+    "loc_transition",
+    "popularity",
+    "item_rating",
+    "item_rating_reviews_count",
+    "item_price",
+    "item_is_phone_hidden",
+    "item_is_message_forbidden",
+    "microcat",
+    "category_match",
+    "query_words",
+    "query_chars",
+    "has_filter",
+    "title_chars",
+    "description_chars",
+    "hybrid",
+    "title_coverage",
+    "body_coverage",
+    "title_phrase",
+    "body_phrase",
+    "dense_tuned",
+    "hybrid_tuned",
+    "dense_title",
+    "dense_tuned_title",
+    "category_probability",
+    "category_relative_probability",
+    "remote_probability",
+    "category_confidence",
+    "category_entropy",
+    "filter_word_coverage",
+    "required_rating",
+    "rating_filter_match",
+    "base_body",
+    "base_title",
+    "fullbody_bm25",
+    "fullbody_idf_coverage",
+    "fullbody_word_coverage",
+    "params_bm25",
+    "params_idf_coverage",
+    "params_word_coverage",
+    "title_bm25",
+    "title_idf_coverage",
+    "title_word_coverage",
+    "word_title",
+    "word_body",
+    "geo_probability",
+    "geo_category_probability",
+    "geo_category_logcount",
+    "category_destination_probability",
+    "geo_reverse_probability",
+    "origin_logcount",
+    "item_price_category_percentile",
+    "item_rating_category_percentile",
+    "item_rating_reviews_count_category_percentile",
+    "item_microcat_id_corpus_count",
+    "item_location_id_corpus_count",
+    "dense_logrank",
+    "title_logrank",
+    "body_logrank",
+    "char_logrank",
+    "dense_tuned_logrank",
+    "dense_title_logrank",
+    "dense_tuned_title_logrank",
+    "prototype8_title",
+    "prototype8_body",
+    "prototype64_title",
+    "prototype64_body",
+    "prototype_max8_title",
+    "prototype_max8_body",
+    "prototype_neighbor_confidence",
+    "prototype_query_agreement",
+    "adapted_base_body",
+    "adapted_base_title",
+    "adapted_base_body_logrank",
+    "adapted_base_title_logrank"
+  ],
+  "shards": [
+    "shards/part_000.npz",
+    "shards/part_001.npz",
+    "shards/part_002.npz",
+    "shards/part_003.npz",
+    "shards/part_004.npz",
+    "shards/part_005.npz",
+    "shards/part_006.npz",
+    "shards/part_007.npz",
+    "shards/part_008.npz",
+    "shards/part_009.npz",
+    "shards/part_010.npz",
+    "shards/part_011.npz",
+    "shards/part_012.npz",
+    "shards/part_013.npz",
+    "shards/part_014.npz",
+    "shards/part_015.npz",
+    "shards/part_016.npz",
+    "shards/part_017.npz",
+    "shards/part_018.npz",
+    "shards/part_019.npz"
+  ],
+  "snapshot_contains": "candidate features, item/query metadata, four fitted models; no cached model scores",
+  "files": {
+    "models/adapted.txt": {
+      "bytes": 2166479,
+      "sha256": "c91fb5bb56ad2037ca5dc751816a79454631ed235a95ca7b8bfc8bb8fea1f640"
+    },
+    "models/cat.cbm": {
+      "bytes": 4313568,
+      "sha256": "b0a69fdec9b351ea364cc3186a0c20c5ea138ad8f9b89c2568c8d28808046247"
+    },
+    "models/lgb.txt": {
+      "bytes": 1815073,
+      "sha256": "ecde29e16dd3a85f70164db1257403004bb2e47f3087e5a30997190071b7c1c2"
+    },
+    "models/prototype.cbm": {
+      "bytes": 4317184,
+      "sha256": "f5ef68411239560ddbf210eb80ad14e346f8ec696ec34d65b1eec3091ef458b9"
+    },
+    "shards/part_000.npz": {
+      "bytes": 19800665,
+      "sha256": "7f5db30b7891f1dc42aaecd25c9d9e89a71e9e8641226033ff4ed63ff9299e4a"
+    },
+    "shards/part_001.npz": {
+      "bytes": 19697430,
+      "sha256": "676e05c98955d80ffb6eb5dfa2aa180b466c75d79135abb42ffb36d9cef512ad"
+    },
+    "shards/part_002.npz": {
+      "bytes": 20506486,
+      "sha256": "40b894a0711e8b3ee74774ca3c1a25b66a4c590bb96d4fa0fea4209a2e22f555"
+    },
+    "shards/part_003.npz": {
+      "bytes": 20190066,
+      "sha256": "a6af74a69fe1933c7f3b1ff2a443d46e26175e853471d41c43c286cfc0222634"
+    },
+    "shards/part_004.npz": {
+      "bytes": 19560791,
+      "sha256": "885a5644799bc62f81c9cc3df778d759b20ea351330d5f8fa473131b34cd05e4"
+    },
+    "shards/part_005.npz": {
+      "bytes": 20091668,
+      "sha256": "6481b355ccb5a7660142a0db18dc17986164a572dd262caf614fbe63d01211e5"
+    },
+    "shards/part_006.npz": {
+      "bytes": 20142362,
+      "sha256": "b7799e710a99e2550f0d4d56d991dd53b7e633bd9d88a63731822b676783ba20"
+    },
+    "shards/part_007.npz": {
+      "bytes": 19169142,
+      "sha256": "9407e9da7f80c237e85d9beeeb12495bae86bcf382e044514e335aeeab3fa064"
+    },
+    "shards/part_008.npz": {
+      "bytes": 19496291,
+      "sha256": "91346865e1e2ee6f791c2810f4f58bf7eb7f0e322b674616363151e5089f9e5b"
+    },
+    "shards/part_009.npz": {
+      "bytes": 20003787,
+      "sha256": "cf686453ae911138740f93633906fea0bf3e29cb40d4ba4af4925bcdb89cdf45"
+    },
+    "shards/part_010.npz": {
+      "bytes": 19390101,
+      "sha256": "933385b9881a8cf7c70ae4f1e736dfd41c20341744c1179d2da4f4376b0fd1b2"
+    },
+    "shards/part_011.npz": {
+      "bytes": 19910592,
+      "sha256": "495296c21c3d8e7c000562fcf22894d80f401aee8684acc40d2cf6a2e0869c4e"
+    },
+    "shards/part_012.npz": {
+      "bytes": 19736234,
+      "sha256": "f458f0a7f6344826143bb1461b3b29ce2928abf94d8d1668ef05a2fe3ec7db9a"
+    },
+    "shards/part_013.npz": {
+      "bytes": 19300596,
+      "sha256": "6e464bc8f36b27545fb34dc18c79f3b67d4373f68f2ecd0fa21cf54b637c6472"
+    },
+    "shards/part_014.npz": {
+      "bytes": 19325022,
+      "sha256": "a2bfe3584095e10e8fb7e03dd8c9aa8bef30fa9f014905ac0223707bffedcd41"
+    },
+    "shards/part_015.npz": {
+      "bytes": 19176131,
+      "sha256": "a796b8b3bfc6188e559bebafc57a083045d1ca4a707eb2c47a512032b6dab439"
+    },
+    "shards/part_016.npz": {
+      "bytes": 19853126,
+      "sha256": "df8c1faabcfe8ac4bd944b0b131ddf1e803f007e011627b9f3b3203b17432fc6"
+    },
+    "shards/part_017.npz": {
+      "bytes": 19536306,
+      "sha256": "b70ef7bfe49f86378055024fd062b6c360b2715a5e8d63ffac76ed125bc3fade"
+    },
+    "shards/part_018.npz": {
+      "bytes": 20568763,
+      "sha256": "348cee307d488b5c80735e01244649331a755663bc3daf710592a241d646e5ff"
+    },
+    "shards/part_019.npz": {
+      "bytes": 3078639,
+      "sha256": "074e92dc0acb8deec6b66c08de9d9080e01577541821959000c1b0687645d675"
+    },
+    "indices.npz": {
+      "sha256": "573e4919f6a9abbb3798f13d90dcf934c1e8459fe04a6ac3a76a41dbf138b40c",
+      "bytes": 2397636
+    }
+  },
+  "input_files": {
+    "train.parquet": "e150ab7a5c98769f643b95ee3a02dc0f664b647facd69a7d280ec6d48ca554a7",
+    "benchmark_items.parquet": "193b3a3961464620cbf8d8797152b7f90cae1826ca749fb7817a210984a09899",
+    "benchmark_queries.parquet": "e49de4fb76f03979a4af96034817767d39ae5de9f94e254fed028243188dda06"
+  }
+}
